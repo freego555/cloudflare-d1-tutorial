@@ -1,5 +1,6 @@
 export interface Env {
   ENVIRONMENT: 'production' | 'staging' | 'development';
+  SECRET1: string;
   DB_DEV: D1Database;
   DB_STAGE: D1Database;
   DB_PROD: D1Database;
@@ -24,6 +25,10 @@ export default {
       )
         .bind(...params)
         .all();
+      
+      // Check the secret value
+      results.push({ secret: env.SECRET1 });
+
       return Response.json(results);
     }
 
