@@ -4,6 +4,24 @@ main = "src/index.ts"
 compatibility_date = "2024-06-03"
 compatibility_flags = ["nodejs_compat"]
 
+d1_databases = [
+  { binding = 'DB_DEV', database_name = 'admin-console-db-dev', database_id = 'c46ec080-2982-4a77-8e77-ed2927a17e54' },
+]
+
+vars = { ENVIRONMENT = 'development'}
+
+[env.staging]
+vars = { ENVIRONMENT = 'staging'}
+d1_databases = [
+  { binding = 'DB_STAGE', database_name = 'stage-admin-console', database_id = '52fe595d-1be2-482e-a58d-05bfa9bcfa22' },
+]
+
+[env.production]
+vars = { ENVIRONMENT = 'production'}
+d1_databases = [
+  { binding = 'DB_PROD', database_name = 'prod-admin-console', database_id = '8d93246e-fe08-4cc6-8e47-e45ab7e6b461' },
+]
+
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Worker, running it closer to your back-end infrastructure
 # rather than the end user may result in better performance.
