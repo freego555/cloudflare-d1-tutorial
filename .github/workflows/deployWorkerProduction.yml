@@ -19,5 +19,7 @@ jobs:
           environment: production
           secrets: |
             SECRET1
+          postCommands: |
+            wrangler d1 migrations apply prod-admin-console --env production
         env:
           SECRET1: ${{ secrets.SECRET1 }}

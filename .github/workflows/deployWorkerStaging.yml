@@ -19,5 +19,7 @@ jobs:
           environment: staging
           secrets: |
             SECRET1
+          postCommands: |
+            wrangler d1 migrations apply stage-admin-console --env staging
         env:
           SECRET1: ${{ secrets.STAGING_SECRET1 }}
