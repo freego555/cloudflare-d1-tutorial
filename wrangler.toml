@@ -5,7 +5,7 @@ compatibility_date = "2024-06-03"
 compatibility_flags = ["nodejs_compat"]
 
 d1_databases = [
-  { binding = 'DB_DEV', database_name = 'admin-console-db-dev', database_id = 'c46ec080-2982-4a77-8e77-ed2927a17e54' },
+  { binding = 'DB_DEV', database_name = 'prod-d1-tutorial', database_id = '4b8c83a7-a617-4d44-b339-e6c78bf7430b' },
 ]
 
 vars = { ENVIRONMENT = 'development'}
